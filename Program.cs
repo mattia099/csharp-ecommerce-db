@@ -62,11 +62,15 @@
             //    Console.WriteLine();
             //}
 
-            //MODIFICARE ORDINE DI UN CLIENTE
-            Order orderUpdate = db.Order.Where(order => order.CustomerId == 3).First();
-            orderUpdate.Amount = 50;
-            db.SaveChanges();
+            ////MODIFICARE ORDINE DI UN CLIENTE
+            //Order orderUpdate = db.Order.Where(order => order.CustomerId == 3).First();
+            //orderUpdate.Amount = 50;
+            //db.SaveChanges();
 
+            //CANCELLARE ORDINE DI UN CLIENTE
+            Order orderDelete = db.Order.Where(Order => Order.CustomerId == 3).First();
+            db.Remove(orderDelete);
+            db.SaveChanges();
 
 
         }
