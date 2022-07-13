@@ -14,9 +14,8 @@ public class Order
     public DateTime Date { get; set; }
     public int Amount { get; set; }
     public bool Status { get; set; }
+    public int CustomerId { get; set; }
     public Customer Customer { get; set; }
     List<Product> Products { get; set; }
-
-    
 
 }

@@ -20,18 +20,30 @@
 
 
             //Console.WriteLine("Recupero lista di Studenti");
-            //List<Product> products = db.Product.OrderBy(student => student.Name).ToList();
+            //List<Product> products = db.Product.ToList();
             //foreach (Product product in products)
             //{
             //    Console.WriteLine(product.Name);
             //}
 
-            Customer customer1 = new Customer("Puglisi", "Mattia", "mattia@hotmail.it");
-            Customer customer2 = new Customer("Rossi", "Martio", "mariorossi@gmail.com");
-            db.Add(customer1);
-            db.Add(customer2);
-            db.SaveChanges();
 
+            ////CREAZIONE UTENTI
+            //Customer customer1 = new Customer("Mattia", "Puglisi", "mattia@hotmail.it");
+            //Customer customer2 = new Customer("Mario", "Rossi", "mariorossi@gmail.com");
+            //db.Add(customer1);
+            //db.Add(customer2);
+            //db.SaveChanges();
+            //CREAZIONE ORDINI
+            //Order order = new Order { CustomerId = 3, Date = DateTime.Now, Status = true};
+            //db.Add(order);
+            //db.SaveChanges();
+
+
+            OrderProduct pivot1 = new OrderProduct(4,1,3);
+            db.Add(pivot1);
+            db.SaveChanges();
+     
+            
 
         }
 

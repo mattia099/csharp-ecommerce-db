@@ -15,4 +15,12 @@ public class OrderProduct
     public Order Order { get; set; }
     public Product Product { get; set; }
     public int Quantity { get; set; }
+    public int OrderId { get; set; }
+    public int ProductId { get; set; }
+    public OrderProduct( int orderId, int productId, int quantity)
+    {
+        OrderId = orderId;
+        ProductId = productId;
+        Quantity = quantity;
+    }
 }
