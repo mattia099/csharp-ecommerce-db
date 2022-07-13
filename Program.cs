@@ -50,16 +50,23 @@
             //OrderProduct pivot3 = new OrderProduct(5,2,1);
             //db.Add(pivot3);
             //db.SaveChanges();
-            
-            List<Order> orders = db.Order.Where(order=>order.CustomerId == 3).ToList();
-            foreach (Order order in orders)
-            {
-                Console.WriteLine(order.CustomerId);
-                Console.WriteLine(order.Date);
-                Console.WriteLine(order.Status);
-                Console.WriteLine();
-            }
-            
+
+
+            //STAMPA ORDINI DI UN CLIENTE
+            //List<Order> orders = db.Order.Where(order=>order.CustomerId == 3).ToList();
+            //foreach (Order order in orders)
+            //{
+            //    Console.WriteLine(order.CustomerId);
+            //    Console.WriteLine(order.Date);
+            //    Console.WriteLine(order.Status);
+            //    Console.WriteLine();
+            //}
+
+            //MODIFICARE ORDINE DI UN CLIENTE
+            Order orderUpdate = db.Order.Where(order => order.CustomerId == 3).First();
+            orderUpdate.Amount = 50;
+            db.SaveChanges();
+
 
 
         }
