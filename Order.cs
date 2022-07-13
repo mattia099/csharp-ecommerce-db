@@ -16,4 +16,7 @@ public class Order
     public bool Status { get; set; }
     public Customer Customer { get; set; }
     List<Product> Products { get; set; }
+
+    
+
 }
