@@ -34,16 +34,33 @@
             //db.Add(customer2);
             //db.SaveChanges();
             //CREAZIONE ORDINI
-            //Order order = new Order { CustomerId = 3, Date = DateTime.Now, Status = true};
+            //Order order1 = new Order { CustomerId = 3, Date = DateTime.Now, Status = true};
             //db.Add(order);
+            //Order order2 = new Order { CustomerId = 3, Date = DateTime.Now, Status = true};
+            //db.Add(order2);
+            //Order order3 = new Order { CustomerId = 3, Date = DateTime.Now, Status = true };
+            //db.Add(order3);
             //db.SaveChanges();
 
-
-            OrderProduct pivot1 = new OrderProduct(4,1,3);
-            db.Add(pivot1);
-            db.SaveChanges();
-     
+            ////Aggiunto ordini di prodotti di un customer
+            //OrderProduct pivot1 = new OrderProduct(4,1,3);
+            //db.Add(pivot1);
+            //OrderProduct pivot2 = new OrderProduct(6,6,2);
+            //db.Add(pivot2);
+            //OrderProduct pivot3 = new OrderProduct(5,2,1);
+            //db.Add(pivot3);
+            //db.SaveChanges();
             
+            List<Order> orders = db.Order.Where(order=>order.CustomerId == 3).ToList();
+            foreach (Order order in orders)
+            {
+                Console.WriteLine(order.CustomerId);
+                Console.WriteLine(order.Date);
+                Console.WriteLine(order.Status);
+                Console.WriteLine();
+            }
+            
+
 
         }
 
