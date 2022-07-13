@@ -67,12 +67,15 @@
             //orderUpdate.Amount = 50;
             //db.SaveChanges();
 
-            //CANCELLARE ORDINE DI UN CLIENTE
-            Order orderDelete = db.Order.Where(Order => Order.CustomerId == 3).First();
-            db.Remove(orderDelete);
+            ////CANCELLARE ORDINE DI UN CLIENTE
+            //Order orderDelete = db.Order.Where(order => order.CustomerId == 3).First();
+            //db.Remove(orderDelete);
+            //db.SaveChanges();
+
+            //ELIMINARE PRODOTTO SU CUI è ATTIVO UN ORDINE
+            Product productDelete = db.Product.Where(product => product.Id == 1).First();
+            db.Remove(productDelete);
             db.SaveChanges();
-
-
         }
 
 
